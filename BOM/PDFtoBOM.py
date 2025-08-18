@@ -14,9 +14,8 @@ DEBUG_DUMP_ALL = False     # True -> 디버그 확인용
 
 #수치 ----------------------------------------------------------
 TARGET_DWG_COORD = (46.5, 755.5)  # DWG No. 기준 좌표(포인트 단위 좌표계)
-mm = 3
-TAG_TOL_MM = mm           # (기존) 수직 인접 판단에 쓰던 기본 mm 값
-HORIZ_TOL_PT = mm         # (기존) x0 정렬 허용치(PT)
+
+TAG_TOL_MM = 3           # (기존) 수직 인접 판단에 쓰던 기본 mm 값, x0 정렬 허용치(PT)
 NEARBY_RADIUS_PT = 10     # (기존) 주변 검색 반경(pt)
 MM_TO_PT = 72 / 25.4      # 1mm ≈ 2.83465pt
 
@@ -26,11 +25,10 @@ COLOR_MULTI = (1.0, 0.0, 0.0) # Q'TY != 1
 border = 1 # 사각형 두께
 rec_size = 5.0 # 사각형 사이즈 (rec_size * 2pt)
 
-CENTER_X_TOL_MM = 5       # x는 같거나 ±5mm
+CENTER_X_TOL_MM = 4       # x는 같거나 ±4mm
 CENTER_Y_TOL_MM = 1       # y는 같거나 ±0.5~1mm 정도 → 1mm로 설정 (필요시 0.5로 낮추세요)
 
 DRAW_COMBINED_MODE = "unionY"
-MARGIN_PT = 1.5
 
 # 접미어 리스트 : PART NAME
 VALID_PREFIXES = ["PSV","PRV","MFM","PG","PT","BV","CV","NV","SV","XV","LF","GD","FD","YS"]
@@ -274,7 +272,7 @@ def _attach_nearby_numeric(objects, idx, base_rect, radius_pt: float, from_annot
         t0 = (t or "").strip()
         if not ok_candidate(t0):
             continue
-        if abs(r[0] - bx0) <= HORIZ_TOL_PT and 0 < (r[1] - by1) <= tol_pt:
+        if abs(r[0] - bx0) <= TAG_TOL_MM and 0 < (r[1] - by1) <= tol_pt:
             d = r[1] - by1
             if best1 is None or d < best1[0]:
                 best1 = (d, j, t0)
@@ -334,7 +332,8 @@ def collect_tags_generic(source, dwg_no: str, from_annots: bool,
             txt = new_txt
             suffix_rect = joined_rect
             # suffix 인덱스는 공용 사용 허용 → used로 마킹하지 않음
-
+        """
+    
         # 2) (폴백) 여전히 숫자 없음 → 기존 주변 결합
         pf = _prefix_of(txt)
         if pf:
@@ -348,6 +347,7 @@ def collect_tags_generic(source, dwg_no: str, from_annots: bool,
                     extra_txt, _extra_idx = extra
                     txt = txt + extra_txt
                     suffix_rect = extra_rect
+        """
 
         # 2.5) 결합이 있었다면 평균점에 1개만 그림
         if suffix_rect is not None:
@@ -427,6 +427,19 @@ def write_to_excel(tag_counts: Dict[str, int], output_path: str) -> None:
     for i, (dwg, tag, part, cnt) in enumerate(rows, start=3):
         ws[f"B{i}"] = dwg; ws[f"C{i}"] = tag; ws[f"D{i}"] = part; ws[f"E{i}"] = cnt
     ws.auto_filter.ref = f"B2:E{2 + len(rows)}"
+
+    # ===== 열 너비 자동 맞춤 (openpyxl 방식) =====
+    for col in ws.columns:
+        max_length = 0
+        col_letter = get_column_letter(col[0].column)
+        for cell in col:
+            try:
+                if cell.value:
+                    max_length = max(max_length, len(str(cell.value)))
+            except:
+                pass
+        # 글자수 * 1.2 정도 = 적당한 여유
+        ws.column_dimensions[col_letter].width = max_length * 1.2
     wb.save(output_path)
 
 
@@ -585,12 +598,12 @@ def main():
         show_alert(
             "추출된 항목이 없습니다 (0건).\n\n"
             "PDF가 SHX 글꼴로 출력되어 텍스트가 벡터로 깨졌을 수 있어요.\n"
-            "출력 프로그램에서 PDFSHX=1로 설정해 다시 출력 후 재시도해 주세요."
+            "CAD에서 PDFSHX=1로 설정해 다시 출력 후 재시도해 주세요."
         )
     else:
         write_to_excel(tags, xlsx_path)
         write_to_annots(pdf_path, existing_counts=tags)
-        show_alert(f"처리가 완료되었습니다. TAG가 없는 경우, 출력이 되지 않으니 꼭! 확인해주세요.\n\n엑셀: {xlsx_path}", title="완료")
+        show_alert(f"BOM 추출이 완료되었습니다.\nTAG가 없는 경우, 출력이 되지 않으니 꼭! 확인해주세요.\n\n엑셀 위치: {xlsx_path}", title="완료")
 
 if __name__ == "__main__":
     main()

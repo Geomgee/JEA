@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5d9f3b-e3cd-4714-ada4-a87ba44b3a70" name="변경" comment="25-08-13 FIND POSITION 초기 파일 생성">
-      <change afterPath="$PROJECT_DIR$/BOM/PDFtoBOM.py" afterDir="false" />
+    <list default="true" id="cc5d9f3b-e3cd-4714-ada4-a87ba44b3a70" name="변경" comment="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOM/PDFtoBOM.py" beforeDir="false" afterPath="$PROJECT_DIR$/BOM/PDFtoBOM.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,30 +54,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.FIND_POSITION.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PDFtoBOM.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GG&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.python.templateLanguages.PyTemplateLanguageModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.FIND_POSITION.executor": "Run",
+    "Python.PDFtoBOM.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "GG",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jikic/IdeaProjects/JEA/BOM",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.intellij.python.templateLanguages.PyTemplateLanguageModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jikic\IdeaProjects\JEA\BOM" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.PDFtoBOM">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="FIND_POSITION" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FUNCTION" />
       <option name="ENV_FILES" value="" />
@@ -99,6 +114,99 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PDFtoBOM" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BOM" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BOM/PDFtoBOM.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -123,7 +231,9 @@
       <option name="presentableId" value="Default" />
       <updated>1755047968843</updated>
       <workItem from="1755047970117" duration="1100000" />
-      <workItem from="1755049220814" duration="13167000" />
+      <workItem from="1755049220814" duration="13559000" />
+      <workItem from="1755129691122" duration="2675000" />
+      <workItem from="1755478862190" duration="8517000" />
     </task>
     <task id="LOCAL-00001" summary="25-08-13 FIND POSITION 초기 파일 생성">
       <option name="closed" value="true" />
@@ -133,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755053466910</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)">
+      <option name="closed" value="true" />
+      <created>1755074540787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755074540787</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,14 +259,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="25-08-13 FIND POSITION 초기 파일 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="25-08-13 FIND POSITION 초기 파일 생성" />
+    <MESSAGE value="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)" />
+    <option name="LAST_COMMIT_MESSAGE" value="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JEA$PDFtoBOM.coverage" NAME="PDFtoBOM 커버리지 결과" MODIFIED="1755072713054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BOM" />
-    <SUITE FILE_PATH="coverage/JEA$FIND_POSITION.coverage" NAME="FIND_POSITION 커버리지 결과" MODIFIED="1755072012826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/function" />
+    <SUITE FILE_PATH="coverage/JEA$PDFtoBOM.coverage" NAME="PDFtoBOM 커버리지 결과" MODIFIED="1755502040556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BOM" />
+    <SUITE FILE_PATH="coverage/JEA$FIND_POSITION.coverage" NAME="FIND_POSITION 커버리지 결과" MODIFIED="1755130019680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/function" />
   </component>
 </project>
