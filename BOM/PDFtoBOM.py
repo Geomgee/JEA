@@ -25,7 +25,7 @@ COLOR_MULTI = (1.0, 0.0, 0.0) # Q'TY != 1
 border = 1 # 사각형 두께
 rec_size = 5.0 # 사각형 사이즈 (rec_size * 2pt)
 
-CENTER_X_TOL_MM = 4       # x는 같거나 ±4mm
+CENTER_X_TOL_MM = 3.5       # x는 같거나 ±4mm >> mfm 문제의 원인
 CENTER_Y_TOL_MM = 1       # y는 같거나 ±0.5~1mm 정도 → 1mm로 설정 (필요시 0.5로 낮추세요)
 
 DRAW_COMBINED_MODE = "unionY"

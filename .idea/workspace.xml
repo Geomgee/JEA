@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5d9f3b-e3cd-4714-ada4-a87ba44b3a70" name="변경" comment="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)">
+    <list default="true" id="cc5d9f3b-e3cd-4714-ada4-a87ba44b3a70" name="변경" comment="25-08-13 [PDF TO BOM]&#10;중복이 아닌 값 중복 처리되는 문제 해결(MFM) 및 열 너비 자동 맞춤 기능 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOM/PDFtoBOM.py" beforeDir="false" afterPath="$PROJECT_DIR$/BOM/PDFtoBOM.py" afterDir="false" />
     </list>
@@ -233,7 +233,7 @@
       <workItem from="1755047970117" duration="1100000" />
       <workItem from="1755049220814" duration="13559000" />
       <workItem from="1755129691122" duration="2675000" />
-      <workItem from="1755478862190" duration="8517000" />
+      <workItem from="1755478862190" duration="9985000" />
     </task>
     <task id="LOCAL-00001" summary="25-08-13 FIND POSITION 초기 파일 생성">
       <option name="closed" value="true" />
@@ -251,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755074540787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="25-08-13 [PDF TO BOM]&#10;중복이 아닌 값 중복 처리되는 문제 해결(MFM) 및 열 너비 자동 맞춤 기능 추가">
+      <option name="closed" value="true" />
+      <created>1755502524489</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755502524489</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,14 +268,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="25-08-13 FIND POSITION 초기 파일 생성" />
     <MESSAGE value="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)" />
-    <option name="LAST_COMMIT_MESSAGE" value="25-08-13 [PDF TO BOM]&#10;기능 추가 - 추출된 주석 네모 처리(in PDF)" />
+    <MESSAGE value="25-08-13 [PDF TO BOM]&#10;중복이 아닌 값 중복 처리되는 문제 해결(MFM) 및 열 너비 자동 맞춤 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="25-08-13 [PDF TO BOM]&#10;중복이 아닌 값 중복 처리되는 문제 해결(MFM) 및 열 너비 자동 맞춤 기능 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JEA$PDFtoBOM.coverage" NAME="PDFtoBOM 커버리지 결과" MODIFIED="1755502040556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BOM" />
+    <SUITE FILE_PATH="coverage/JEA$PDFtoBOM.coverage" NAME="PDFtoBOM 커버리지 결과" MODIFIED="1755503083524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BOM" />
     <SUITE FILE_PATH="coverage/JEA$FIND_POSITION.coverage" NAME="FIND_POSITION 커버리지 결과" MODIFIED="1755130019680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/function" />
   </component>
 </project>
